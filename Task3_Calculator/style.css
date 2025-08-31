@@ -6,20 +6,30 @@
 }
 
 body {
-  background: linear-gradient(135deg, #e0e7ff, #f8fafc);
+  /* Animated dark gradient background */
+  background: linear-gradient(135deg, #23272f, #18181b, #111112, #23272f);
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease-in-out infinite;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #f3f3f3;
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
 }
 
 .calculator {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(30, 30, 30, 0.7);
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.3);
   backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   width: 300px;
 }
 
@@ -31,7 +41,8 @@ body {
   border: none;
   border-radius: 10px;
   margin-bottom: 1rem;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(40, 40, 40, 0.9);
+  color: #f3f3f3;
 }
 
 .buttons {
@@ -45,20 +56,22 @@ button {
   font-size: 1.2rem;
   border: none;
   border-radius: 10px;
-  background: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: #23272f;
+  color: #f3f3f3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  transition: 0.2s;
+  transition: background 0.2s, color 0.2s;
 }
 
 button:hover {
-  background: #ececec;
+  background: #18181b;
+  color: #fff;
 }
 
 .equals {
   grid-column: span 2;
   background: #000;
-  color: white;
+  color: #fff;
 }
 
 .equals:hover {

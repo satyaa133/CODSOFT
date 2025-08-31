@@ -9,8 +9,8 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
-  color: #111;
+  background: linear-gradient(135deg, #18181b 0%, #23272f 60%, #111112 100%);
+  color: #f3f3f3;
   min-height: 100vh;
   opacity: 0;
   animation: fadeIn 0.8s ease-in-out forwards;
@@ -21,12 +21,12 @@ header,
 .features,
 .box,
 footer {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.12);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 /* Header */
@@ -40,18 +40,19 @@ header {
 header h1 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
+  color: #fff;
 }
 
 .brand {
   font-weight: 700;
-  background: linear-gradient(to right, #000, #555);
+  background: linear-gradient(to right, #fff, #bbb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .tagline {
   font-size: 1.25rem;
-  color: #555;
+  color: #e0e0e0;
 }
 
 .cta {
@@ -81,39 +82,35 @@ header h1 {
   padding: 4rem 2rem;
   margin: 0 auto 40px auto;
   max-width: 900px;
-  background: rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.10);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
   border-radius: 32px;
-  border: 1px solid rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.14);
 }
 
 .box {
-  background: rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.18);
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(31,38,135,0.10);
   max-width: 250px;
   width: 90%;
   text-align: center;
-  border: 1px solid rgba(255,255,255,0.22);
+  border: 1px solid rgba(255,255,255,0.18);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.box i {
-  color: #000;
-  margin-bottom: 1rem;
-}
-
 .box h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  color: #fff;
 }
 
 .box p {
   font-size: 0.95rem;
-  color: #555;
+  color: #d1d5db;
 }
 
 .box:hover {
@@ -126,13 +123,13 @@ footer {
   text-align: center;
   padding: 2rem;
   font-size: 0.9rem;
-  color: #666;
+  color: #b3b3b3;
   margin: 0 auto 32px auto;
   max-width: 600px;
-  background: rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.12);
   box-shadow: 0 4px 16px rgba(31,38,135,0.08);
   border-radius: 20px;
-  border: 1px solid rgba(255,255,255,0.22);
+  border: 1px solid rgba(255,255,255,0.14);
 }
 
 /* Animations */
@@ -189,6 +186,7 @@ footer {
 
 .pricing h2 {
   margin-bottom: 2rem;
+  color: #fff;
 }
 
 .pricing-cards {
@@ -199,29 +197,38 @@ footer {
 }
 
 .price-card {
-  background: rgba(255,255,255,0.25);
-  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.14);
   border-radius: 20px;
   padding: 2rem;
   max-width: 250px;
   backdrop-filter: blur(12px);
   box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  color: #f3f3f3;
 }
 
 .price-card.premium {
-  border: 2px solid #000;
-  background: white;
+  border: 2px solid #fff;
+  background: rgba(255,255,255,0.22);
+  color: #18181b;
 }
 
 .price-card ul {
   list-style: none;
   padding: 0;
   margin-top: 1rem;
-  color: #333;
+  color: #e0e0e0;
 }
 
 .price-card li {
   margin-bottom: 0.5rem;
+}
+
+.price-card.selected {
+  border: 2px solid #fff;
+  background: #fff;
+  color: #18181b;
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.08);
 }
 
 /* Testimonials */
@@ -233,10 +240,18 @@ footer {
   margin: auto;
 }
 
+.testimonials h2 {
+  color: #fff;
+}
+
 .testimonials blockquote {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: #444;
+  color: #f3f3f3;
+}
+
+.testimonials cite {
+  color: #b3b3b3;
 }
 
 /* Newsletter */
@@ -245,64 +260,28 @@ footer {
   padding: 3rem 2rem;
 }
 
+.newsletter h2 {
+  color: #fff;
+}
+
+.newsletter p {
+  color: #e0e0e0;
+}
+
 .newsletter input {
   padding: 0.8rem;
   width: 280px;
   border: none;
   border-radius: 8px;
   margin-right: 0.5rem;
+  background: rgba(255,255,255,0.08);
+  color: #f3f3f3;
 }
 
 .newsletter button {
   padding: 0.8rem 1.5rem;
-  background: #000;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.newsletter button:hover {
-  background: #333;
-}
-
-/* Pricing Select Animation */
-.price-card {
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
-}
-
-.price-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-}
-
-.price-card.selected {
-  border: 2px solid #000;
-  background: #fff;
-  color: #000;
-  box-shadow: 0 0 0 4px rgba(0,0,0,0.1);
-}
-
-/* Newsletter Form */
-.newsletter form {
-  margin-top: 1rem;
-}
-
-.newsletter input {
-  padding: 0.8rem;
-  width: 260px;
-  max-width: 80%;
-  border: none;
-  border-radius: 8px;
-  margin-right: 0.5rem;
-  font-family: 'Inter', sans-serif;
-}
-
-.newsletter button {
-  padding: 0.8rem 1.5rem;
-  background: #000;
-  color: white;
+  background: #23272f;
+  color: #fff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -311,5 +290,10 @@ footer {
 }
 
 .newsletter button:hover {
-  background: #333;
+  background: #111112;
+}
+
+/* Newsletter Form */
+.newsletter form {
+  margin-top: 1rem;
 }
